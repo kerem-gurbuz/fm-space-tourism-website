@@ -1,8 +1,7 @@
-import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+import { barlow, barlow_condensed, bellefair } from '@/styles/fonts';
+import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${barlow.variable} ${barlow_condensed.variable} ${bellefair.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
