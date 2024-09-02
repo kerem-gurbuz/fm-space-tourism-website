@@ -10,9 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        barlow: ['var(--font-barlow)'],
-        'barlow-condensed': ['var(--font-barlow-condensed)'],
-        bellefair: ['var(--font-bellefair)'],
+        barlow: [
+          'var(--font-barlow)',
+          { fontFeatureSettings: '"liga" 0, "clig" 0' },
+        ],
+        'barlow-condensed': [
+          'var(--font-barlow-condensed)',
+          { fontFeatureSettings: '"liga" 0, "clig" 0' },
+        ],
+        bellefair: [
+          'var(--font-bellefair)',
+          { fontFeatureSettings: '"liga" 0, "clig" 0' },
+        ],
       },
       borderRadius: {
         lg: 'var(--radius)',
