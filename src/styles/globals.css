@@ -86,3 +86,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+.text-preset-1 {
+  @apply font-bellefair text-[144px] leading-[171.9%] tracking-[0px];
+}
+
+.text-preset-2 {
+  @apply font-bellefair text-[100px] leading-[114.6%] tracking-[0px];
+}
+
+.text-preset-3 {
+  @apply font-bellefair text-[56px] leading-[64.2%] tracking-[0px];
+}
+
+.text-preset-4 {
+  @apply font-bellefair text-[32px] leading-[36.7%] tracking-[0px];
+}
+
+.text-preset-5 {
+  @apply font-barlow-condensed text-[28px] leading-[33.6%] tracking-[4px];
+}
+
+.text-preset-6 {
+  @apply font-bellefair text-[28px] leading-[32.1%] tracking-[0px];
+}
+
+.text-preset-7 {
+  @apply font-barlow-condensed text-[14px] leading-[16.8%] tracking-[2px];
+}
+
+.text-preset-8 {
+  @apply font-barlow-condensed text-[16px] leading-[19.2%] tracking-[2px];
+}
+
+.text-preset-9 {
+  @apply font-barlow text-[18px] leading-[180%] tracking-[0px];
+}
