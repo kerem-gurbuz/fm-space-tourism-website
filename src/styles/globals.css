@@ -67,38 +67,91 @@
   }
 }
 
-.text-preset-1 {
-  @apply font-bellefair text-[144px] leading-[171.9%] tracking-[0px];
+/* ------------------------------- TYPOGRAPHY ------------------------------- */
+/* 
+ * .text_preset_<number>--<desktop|tablet|mobile>
+ */
+
+.text_preset_1--desktop {
+  @apply font-bellefair text-[144px] leading-[165.02px] tracking-[0px];
 }
 
-.text-preset-2 {
-  @apply font-bellefair text-[100px] leading-[114.6%] tracking-[0px];
+.text_preset_1--mobile {
+  @apply font-bellefair text-[80px] leading-[91.68px] tracking-[0px];
 }
 
-.text-preset-3 {
-  @apply font-bellefair text-[56px] leading-[64.2%] tracking-[0px];
+.text_preset_2--desktop {
+  @apply font-bellefair text-[96px] leading-[110.02px] tracking-[0px];
 }
 
-.text-preset-4 {
-  @apply font-bellefair text-[32px] leading-[36.7%] tracking-[0px];
+.text_preset_2--tablet {
+  @apply font-bellefair text-[80px] leading-[91.68px] tracking-[0px];
 }
 
-.text-preset-5 {
-  @apply font-barlow-condensed text-[28px] leading-[33.6%] tracking-[4px];
+.text_preset_2--mobile {
+  @apply font-bellefair text-[56px] leading-[64.18px] tracking-[0px];
 }
 
-.text-preset-6 {
-  @apply font-bellefair text-[28px] leading-[32.1%] tracking-[0px];
+.text_preset_3--desktop {
+  @apply font-bellefair text-[56px] leading-[64.18px] tracking-[0px];
 }
 
-.text-preset-7 {
-  @apply font-barlow-condensed text-[14px] leading-[16.8%] tracking-[2px];
+.text_preset_3--tablet {
+  @apply font-bellefair text-[40px] leading-[45.84px] tracking-[0px];
 }
 
-.text-preset-8 {
-  @apply font-barlow-condensed text-[16px] leading-[19.2%] tracking-[2px];
+.text_preset_3--mobile {
+  @apply font-bellefair text-[24px] leading-[27.5px] tracking-[0px];
 }
 
-.text-preset-9 {
-  @apply font-barlow text-[18px] leading-[180%] tracking-[0px];
+.text_preset_4--desktop {
+  @apply font-bellefair text-[32px] leading-[36.67px] tracking-[0px];
+}
+
+.text_preset_4--tablet {
+  @apply font-bellefair text-[24px] leading-[27.5px] tracking-[0px];
+}
+
+.text_preset_4--mobile {
+  @apply font-bellefair text-[18px] leading-[20.63px] tracking-[0px];
+}
+
+.text_preset_5--desktop {
+  @apply font-barlow-condensed text-[28px] leading-[33.6px] tracking-[4px];
+}
+
+.text_preset_5--tablet {
+  @apply font-barlow-condensed text-[20px] leading-[24px] tracking-[4px];
+}
+
+.text_preset_6--desktop {
+  @apply font-bellefair text-[28px] leading-[32.09px] tracking-[0px];
+}
+
+.text_preset_6--mobile {
+  @apply font-bellefair text-[16px] leading-[19.2px] tracking-[15%];
+}
+
+.text_preset_7--desktop {
+  @apply font-barlow-condensed text-[14px] leading-[16.8px] tracking-[2px];
+}
+
+.text_preset_8--desktop {
+  @apply font-barlow-condensed text-[16px] leading-[19.2px] tracking-[2px];
+}
+
+.text_preset_8--mobile {
+  @apply font-barlow-condensed text-[14px] leading-[16.8px] tracking-[15%];
+}
+
+.text_preset_9--desktop {
+  @apply font-barlow text-[18px] leading-[32.4px] tracking-[0px];
+}
+
+.text_preset_9--tablet {
+  @apply font-barlow text-[16px] leading-[28.8px] tracking-[0px];
+}
+
+.text_preset_9--mobile {
+  @apply font-barlow text-[15px] leading-[27px] tracking-[0px];
 }
