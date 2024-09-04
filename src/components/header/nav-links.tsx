@@ -3,25 +3,44 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
+import type { NavigationLink } from '@/lib/constants/navigation-links';
 import { cn } from '@/lib/utils';
 
 type NavLinksProps = {
   containerClassName?: string;
+  navListClassName?: string;
+  navListDirection: 'horizontal' | 'vertical';
+  navLinks: NavigationLink[];
 };
 
-export function NavLinks({ containerClassName }: NavLinksProps) {
+export function NavLinks({
+  containerClassName,
+  navListClassName,
+  navListDirection,
+  navLinks,
+}: NavLinksProps) {
   const pathname = usePathname();
 
   return (
-    <nav className={cn('h-24 bg-white/5 px-10 lg:px-16', containerClassName)}>
-      <ul className="flex h-full justify-end gap-12">
-        {NAVIGATION_LINKS.map(({ label, href }, index) => (
+    <nav className={containerClassName}>
+      <ul
+        className={cn(
+          'h-full',
+          {
+            'flex-row': navListDirection === 'horizontal',
+            'flex-col': navListDirection === 'vertical',
+          },
+          navListClassName,
+        )}
+      >
+        {navLinks.map(({ label, href }, index) => (
           <li
             key={index}
             className={cn(
-              'border-b-[3px] border-transparent transition-colors duration-300 hover:border-white/50',
+              'border-transparent transition-colors duration-300 hover:border-white/50',
               {
+                'border-b-[3px]': navListDirection === 'horizontal',
+                'border-r-[3px]': navListDirection === 'vertical',
                 'border-white hover:border-white': pathname === href,
               },
             )}
@@ -30,11 +49,13 @@ export function NavLinks({ containerClassName }: NavLinksProps) {
               href={href}
               className="text_preset_8--desktop flex h-full items-center gap-3"
             >
-              {index > 0 ? (
+              {navListDirection === 'vertical' ||
+              (navListDirection === 'horizontal' && index > 0) ? (
                 <span className="font-bold tracking-[2.7px]">
                   {index.toString().padStart(2, '0')}
                 </span>
               ) : null}
+
               <span className="uppercase">{label}</span>
             </Link>
           </li>

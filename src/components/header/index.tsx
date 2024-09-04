@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { NavLinks } from '@/components/header/nav-links';
-import { Button } from '@/components/ui/button';
+import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
+import { NavMenu } from './nav-menu';
 
 export function Header() {
   return (
@@ -16,17 +17,13 @@ export function Header() {
           </div>
           <div className="hidden h-[1px] w-full bg-white opacity-25 lg:-mr-4 lg:block" />
         </div>
-        <NavLinks containerClassName="hidden flex-1 md:block lg:-ml-4" />
-
-        {/* TODO: Implement mobile menu */}
-        <Button className="px-6 md:hidden">
-          <Image
-            src="/assets/shared/icon-hamburger.svg"
-            width={24}
-            height={21}
-            alt="Mobile Menu"
-          />
-        </Button>
+        <NavLinks
+          containerClassName="hidden h-24 flex-1 bg-white/5 px-10 md:block lg:-ml-4 lg:px-16"
+          navListClassName="flex justify-end gap-12"
+          navListDirection="horizontal"
+          navLinks={NAVIGATION_LINKS}
+        />
+        <NavMenu />
       </div>
     </header>
   );
