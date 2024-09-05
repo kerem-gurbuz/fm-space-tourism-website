@@ -40,7 +40,7 @@ export function NavMenu() {
       </SheetTrigger>
       <SheetContent
         side="right"
-        className="min-h-dvh w-[254px] border-none bg-blue-900/15 p-0 pl-8 pt-[133px]"
+        className="min-h-dvh w-[254px] border-none bg-blue-900/15 p-0 pl-8 pt-[133px] backdrop-blur-xl"
       >
         <SheetHeader className="sr-only">
           <SheetTitle>Navigation menu</SheetTitle>

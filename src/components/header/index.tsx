@@ -7,7 +7,7 @@ import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
 
 export function Header() {
   return (
-    <header id="header">
+    <header id="header" className="fixed inset-x-0 top-0 z-50">
       <div className="flex items-center justify-between py-6 md:py-0 lg:pt-10">
         {/* Logo Container */}
         <div className="flex items-center justify-start lg:w-1/2">
@@ -16,12 +16,12 @@ export function Header() {
               <Image src="/assets/shared/logo.svg" alt="Logo" fill priority />
             </Link>
           </div>
-          <div className="hidden h-[1px] w-full bg-white opacity-25 lg:-mr-4 lg:block" />
+          <div className="z-10 hidden h-[1px] w-full bg-white opacity-25 lg:-mr-4 lg:block" />
         </div>
         {/* Desktop & Tablet Navigation Bar */}
         <div className="hidden flex-1 md:block lg:-ml-4">
           <NavLinks
-            containerClassName="h-24 bg-white/5 px-10 lg:px-16"
+            containerClassName="h-24 bg-white/5 px-10 backdrop-blur-xl lg:px-16"
             navListClassName="justify-end gap-12"
             navListDirection="horizontal"
             navLinks={NAVIGATION_LINKS}
