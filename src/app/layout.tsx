@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { Header } from '@/components/header';
 import { barlow, barlow_condensed, bellefair } from '@/styles/fonts';
 import '@/styles/globals.css';
 
@@ -22,7 +23,8 @@ export default function RootLayout({
       lang="en"
       className={`${barlow.variable} ${barlow_condensed.variable} ${bellefair.variable}`}
     >
-      <body className="min-h-dvh antialiased">
+      <body className="min-h-dvh text-white antialiased">
+        <Header />
         <main>{children}</main>
       </body>
     </html>
