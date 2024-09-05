@@ -71,7 +71,6 @@ const SheetContent = React.forwardRef<
           alt="Close mobile menu"
           width={20}
           height={21}
-          className="mx-[2px]"
         />
         <span className="sr-only">Close mobile menu</span>
       </SheetPrimitive.Close>

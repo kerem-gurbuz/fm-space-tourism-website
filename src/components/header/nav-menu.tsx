@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useWindowSize } from 'usehooks-ts';
 
 import { NavLinks } from '@/components/header/nav-links';
 import {
@@ -12,9 +16,20 @@ import {
 import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
 
 export function NavMenu() {
+  const [open, setOpen] = useState(false);
+  const { width } = useWindowSize({
+    debounceDelay: 200,
+  });
+
+  useEffect(() => {
+    if (width >= 768) {
+      setOpen(() => false);
+    }
+  }, [width]);
+
   return (
-    <Sheet>
-      <SheetTrigger className="mx-6 md:hidden">
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger className="flex items-center">
         <Image
           src="/assets/shared/icon-hamburger.svg"
           alt="Open mobile menu"
@@ -30,11 +45,11 @@ export function NavMenu() {
         <SheetHeader className="sr-only">
           <SheetTitle>Navigation menu</SheetTitle>
           <SheetDescription>
-            Mobile navigation menu for mobile devices
+            Navigation menu for mobile devices
           </SheetDescription>
         </SheetHeader>
         <NavLinks
-          navListClassName="flex justify-start gap-8"
+          navListClassName="justify-start gap-8"
           navListDirection="vertical"
           navLinks={NAVIGATION_LINKS}
         />

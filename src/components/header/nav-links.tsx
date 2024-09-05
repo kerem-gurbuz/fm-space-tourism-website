@@ -25,7 +25,7 @@ export function NavLinks({
     <nav className={containerClassName}>
       <ul
         className={cn(
-          'h-full',
+          'flex h-full',
           {
             'flex-row': navListDirection === 'horizontal',
             'flex-col': navListDirection === 'vertical',
@@ -55,7 +55,6 @@ export function NavLinks({
                   {index.toString().padStart(2, '0')}
                 </span>
               ) : null}
-
               <span className="uppercase">{label}</span>
             </Link>
           </li>
