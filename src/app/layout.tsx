@@ -23,8 +23,8 @@ export default function RootLayout({
       lang="en"
       className={`${barlow.variable} ${barlow_condensed.variable} ${bellefair.variable}`}
     >
-      <body className="min-h-dvh text-white antialiased">
-        <Header />
+      <body className="text-white antialiased">
+        <Header containerClassName="fixed inset-x-0 top-0 z-50" />
         <main>{children}</main>
       </body>
     </html>
