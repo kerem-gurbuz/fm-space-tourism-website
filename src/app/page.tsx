@@ -1,4 +1,5 @@
 import { BackgroundImage } from '@/components/background-image';
+import { Hero } from '@/components/home-page/hero';
 
 import desktopImageSrc from '/public/assets/home/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/home/background-mobile.jpg';
@@ -9,7 +10,10 @@ const BACKGROUND_IMAGE_ALT =
 
 export default function HomePage() {
   return (
-    <div id="home-page" className="relative min-h-dvh">
+    <section
+      id="home-page"
+      className="page_padding--top relative flex min-h-dvh"
+    >
       <BackgroundImage
         mobileImage={{
           src: mobileImageSrc,
@@ -31,6 +35,9 @@ export default function HomePage() {
           priority: true,
         }}
       />
-    </div>
+      <div className="mx-auto w-full max-w-[1110px] p-6 md:px-10 md:py-32 lg:px-16 xl:px-0">
+        <Hero />
+      </div>
+    </section>
   );
 }

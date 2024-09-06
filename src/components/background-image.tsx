@@ -32,8 +32,8 @@ export function BackgroundImage({
   }
 
   return (
-    <div className={cn('absolute inset-0', containerClassName)}>
-      <div className="relative h-full w-full">
+    <div className={cn('absolute inset-0 -z-50', containerClassName)}>
+      <div className="relative h-full">
         {mobileImage ? (
           <Image
             src={mobileImage.src}
