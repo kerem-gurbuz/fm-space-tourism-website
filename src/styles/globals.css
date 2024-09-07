@@ -142,7 +142,7 @@
   }
 
   .text_preset_8--mobile {
-    @apply font-barlow-condensed text-[14px] leading-[16.8px] tracking-[15%];
+    @apply font-barlow-condensed text-[14px] leading-[16.8px] tracking-[0.15em];
   }
 
   .text_preset_9--desktop {

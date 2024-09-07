@@ -1,4 +1,5 @@
 import { BackgroundImage } from '@/components/background-image';
+import { DestinationTabs } from '@/components/destination-page';
 
 import desktopImageSrc from '/public/assets/destination/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/destination/background-mobile.jpg';
@@ -37,7 +38,7 @@ export default function DestinationPage() {
         }}
       />
       <div className="mx-auto w-full max-w-[1110px] p-6 md:p-10 lg:px-16 lg:py-12 xl:px-0">
-        <p className="flex justify-center gap-6 md:justify-start">
+        <p className="mb-6 flex justify-center gap-6 md:justify-start">
           <span className="text_preset_9--mobile-bold md:text_preset_5--tablet lg:text_preset_5--desktop font-bold opacity-25 lg:tracking-[4.72px]">
             01
           </span>
@@ -45,6 +46,7 @@ export default function DestinationPage() {
             Pick your destination
           </span>
         </p>
+        <DestinationTabs />
       </div>
     </div>
   );

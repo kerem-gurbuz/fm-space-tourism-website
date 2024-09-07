@@ -1,5 +1,5 @@
 import { BackgroundImage } from '@/components/background-image';
-import { Hero } from '@/components/home-page/hero';
+import { Hero } from '@/components/home-page';
 
 import desktopImageSrc from '/public/assets/home/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/home/background-mobile.jpg';
