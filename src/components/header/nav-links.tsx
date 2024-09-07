@@ -22,7 +22,7 @@ export function NavLinks({
   const pathname = usePathname();
 
   return (
-    <nav className={containerClassName}>
+    <nav aria-label="main navigation" className={containerClassName}>
       <ul
         className={cn(
           'flex h-full',

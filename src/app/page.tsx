@@ -10,11 +10,13 @@ const BACKGROUND_IMAGE_ALT =
 
 export default function HomePage() {
   return (
-    <section
+    <div
       id="home-page"
+      aria-label="Space Travel Homepage"
       className="page_padding--top relative flex min-h-dvh"
     >
       <BackgroundImage
+        containerClassName="absolute inset-0 -z-50"
         mobileImage={{
           src: mobileImageSrc,
           alt: BACKGROUND_IMAGE_ALT,
@@ -38,6 +40,6 @@ export default function HomePage() {
       <div className="mx-auto w-full max-w-[1110px] p-6 md:px-10 md:py-32 lg:px-16 xl:px-0">
         <Hero />
       </div>
-    </section>
+    </div>
   );
 }
