@@ -15,14 +15,14 @@ type StaticImageProps = {
 };
 
 type BackgroundImageProps = {
-  containerClassName: string;
+  className: React.ComponentProps<'div'>['className'];
   mobileImage?: StaticImageProps;
   tabletImage?: StaticImageProps;
   desktopImage?: StaticImageProps;
 };
 
 export function BackgroundImage({
-  containerClassName,
+  className,
   mobileImage,
   tabletImage,
   desktopImage,
@@ -32,7 +32,7 @@ export function BackgroundImage({
   }
 
   return (
-    <div className={containerClassName}>
+    <div className={className}>
       <div className="relative h-full">
         {mobileImage ? (
           <Image

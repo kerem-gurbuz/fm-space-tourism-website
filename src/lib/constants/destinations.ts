@@ -1,4 +1,11 @@
-type Destination = {
+export enum DESTINATION_NAME {
+  MOON = 'Moon',
+  MARS = 'Mars',
+  EUROPA = 'Europa',
+  TITAN = 'Titan',
+}
+
+export type Destination = {
   name: string;
   imageSrc: string;
   description: string;
@@ -6,8 +13,8 @@ type Destination = {
   travel: string;
 };
 
-export const DESTINATIONS: Destination[] = [
-  {
+export const DESTINATIONS: { [key in DESTINATION_NAME]: Destination } = {
+  [DESTINATION_NAME.MOON]: {
     name: 'Moon',
     imageSrc: '/assets/destination/image-moon.webp',
     description:
@@ -15,7 +22,7 @@ export const DESTINATIONS: Destination[] = [
     distance: '384,400 km',
     travel: '3 days',
   },
-  {
+  [DESTINATION_NAME.MARS]: {
     name: 'Mars',
     imageSrc: '/assets/destination/image-mars.webp',
     description:
@@ -23,7 +30,7 @@ export const DESTINATIONS: Destination[] = [
     distance: '225 mil. km',
     travel: '9 months',
   },
-  {
+  [DESTINATION_NAME.EUROPA]: {
     name: 'Europa',
     imageSrc: '/assets/destination/image-europa.webp',
     description:
@@ -31,7 +38,7 @@ export const DESTINATIONS: Destination[] = [
     distance: '628 mil. km',
     travel: '3 years',
   },
-  {
+  [DESTINATION_NAME.TITAN]: {
     name: 'Titan',
     imageSrc: '/assets/destination/image-titan.webp',
     description:
@@ -39,4 +46,4 @@ export const DESTINATIONS: Destination[] = [
     distance: '1.6 bil. km',
     travel: '7 years',
   },
-];
+};

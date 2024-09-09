@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
+import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
+
+const EXPLORE_BUTTON_LINK = NAVIGATION_LINKS.DESTINATION.href;
 
 export function Hero() {
   return (
@@ -34,7 +37,7 @@ export function Hero() {
             className="text_preset_4--mobile md:text_preset_4--desktop h-[144px] w-[144px] rounded-full bg-white p-0 uppercase text-blue-900 transition-all duration-300 hover:bg-white hover:text-blue-900/50 hover:ring-[88px] hover:ring-white/10 md:h-[272px] md:w-[272px]"
             asChild
           >
-            <Link href="/destination">Explore</Link>
+            <Link href={EXPLORE_BUTTON_LINK}>Explore</Link>
           </Button>
         </div>
       </div>

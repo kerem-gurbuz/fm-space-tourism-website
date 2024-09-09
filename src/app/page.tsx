@@ -1,5 +1,5 @@
 import { BackgroundImage } from '@/components/background-image';
-import { Hero } from '@/components/home-page';
+import { Hero } from '@/components/home';
 
 import desktopImageSrc from '/public/assets/home/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/home/background-mobile.jpg';
@@ -12,11 +12,10 @@ export default function HomePage() {
   return (
     <div
       id="home-page"
-      aria-label="Space Travel Homepage"
-      className="page_padding--top relative flex min-h-dvh"
+      className="content_padding--top relative flex min-h-dvh"
     >
       <BackgroundImage
-        containerClassName="absolute inset-0 -z-50"
+        className="absolute inset-0 -z-50"
         mobileImage={{
           src: mobileImageSrc,
           alt: BACKGROUND_IMAGE_ALT,

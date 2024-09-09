@@ -6,12 +6,12 @@ import { NavMenu } from '@/components/header/nav-menu';
 import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
 
 type HeaderProps = {
-  containerClassName?: string;
+  className?: React.ComponentProps<'header'>['className'];
 };
 
-export function Header({ containerClassName }: HeaderProps) {
+export function Header({ className }: HeaderProps) {
   return (
-    <header id="header" className={containerClassName}>
+    <header id="header" className={className}>
       <div className="flex items-center justify-between py-6 md:py-0 lg:pt-10">
         {/* Logo Container */}
         <div className="flex items-center justify-start lg:w-1/2">
@@ -25,10 +25,10 @@ export function Header({ containerClassName }: HeaderProps) {
         {/* Desktop & Tablet Navigation Bar */}
         <div className="hidden flex-1 md:block lg:-ml-4">
           <NavLinks
-            containerClassName="h-24 bg-white/5 px-10 backdrop-blur-2xl lg:px-16"
-            navListClassName="justify-end gap-12"
+            className="h-24 bg-white/5 px-10 backdrop-blur-2xl lg:px-16"
             navListDirection="horizontal"
-            navLinks={NAVIGATION_LINKS}
+            navListClassName="justify-end gap-12"
+            navLinks={Object.values(NAVIGATION_LINKS)}
           />
         </div>
         {/* Mobile Navigation Menu */}

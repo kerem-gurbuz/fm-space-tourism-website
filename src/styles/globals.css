@@ -165,7 +165,7 @@
 /* -------------------------------- UTILITIES ------------------------------- */
 
 @layer utilities {
-  .page_padding--top {
+  .content_padding--top {
     @apply pt-[88px] md:pt-[96px] lg:pt-[136px];
   }
 }
