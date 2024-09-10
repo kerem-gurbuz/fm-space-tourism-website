@@ -1,8 +1,13 @@
+import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
+import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
+
+const EXPLORE_BUTTON_LINK = NAVIGATION_LINKS.DESTINATION.href;
 
 export function Hero() {
   return (
-    <div
+    <section
       id="hero"
       className="grid h-full grid-cols-1 grid-rows-[auto_1fr] md:grid-rows-[auto_auto] lg:grid-cols-2 lg:content-end"
     >
@@ -28,11 +33,14 @@ export function Hero() {
       {/* Button */}
       <div className="mx-auto max-w-[540px] md:w-[512px] md:self-end lg:mx-0 lg:w-full lg:self-center lg:justify-self-end">
         <div className="flex h-full items-center justify-center md:items-end lg:items-center lg:justify-end">
-          <Button className="text_preset_4--mobile md:text_preset_4--desktop h-[144px] w-[144px] rounded-full bg-white p-0 uppercase text-blue-900 transition-all duration-300 hover:bg-white hover:text-blue-900/50 hover:ring-[88px] hover:ring-white/10 md:h-[272px] md:w-[272px]">
-            Explore
+          <Button
+            className="text_preset_4--mobile md:text_preset_4--desktop h-[144px] w-[144px] rounded-full bg-white p-0 uppercase text-blue-900 transition-all duration-300 hover:bg-white hover:text-blue-900/50 hover:ring-[88px] hover:ring-white/10 md:h-[272px] md:w-[272px]"
+            asChild
+          >
+            <Link href={EXPLORE_BUTTON_LINK}>Explore</Link>
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

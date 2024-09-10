@@ -14,15 +14,15 @@ type StaticImageProps = {
   priority?: boolean;
 };
 
-type BackgroundImageProps = Partial<{
-  containerClassName: string;
-  mobileImage: StaticImageProps;
-  tabletImage: StaticImageProps;
-  desktopImage: StaticImageProps;
-}>;
+type BackgroundImageProps = {
+  className: React.ComponentProps<'div'>['className'];
+  mobileImage?: StaticImageProps;
+  tabletImage?: StaticImageProps;
+  desktopImage?: StaticImageProps;
+};
 
 export function BackgroundImage({
-  containerClassName,
+  className,
   mobileImage,
   tabletImage,
   desktopImage,
@@ -32,7 +32,7 @@ export function BackgroundImage({
   }
 
   return (
-    <div className={cn('absolute inset-0 -z-50', containerClassName)}>
+    <div className={className}>
       <div className="relative h-full">
         {mobileImage ? (
           <Image

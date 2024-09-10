@@ -122,7 +122,7 @@
   }
 
   .text_preset_5--tablet {
-    @apply font-barlow-condensed text-[20px] leading-[24px] tracking-[4px];
+    @apply font-barlow-condensed text-[20px] leading-[24px] tracking-[0.15em];
   }
 
   .text_preset_6--desktop {
@@ -130,7 +130,7 @@
   }
 
   .text_preset_6--mobile {
-    @apply font-barlow-condensed text-[16px] leading-[19.2px] tracking-[2.4px];
+    @apply font-barlow-condensed text-[16px] leading-[19.2px] tracking-[0.15em];
   }
 
   .text_preset_7--desktop {
@@ -142,7 +142,7 @@
   }
 
   .text_preset_8--mobile {
-    @apply font-barlow-condensed text-[14px] leading-[16.8px] tracking-[15%];
+    @apply font-barlow-condensed text-[14px] leading-[16.8px] tracking-[0.15em];
   }
 
   .text_preset_9--desktop {
@@ -156,12 +156,16 @@
   .text_preset_9--mobile {
     @apply font-barlow text-[15px] leading-[27px] tracking-[0px];
   }
+
+  .text_preset_9--mobile-bold {
+    @apply font-barlow-condensed text-[16px] font-bold leading-[19.2px] tracking-[0.15em];
+  }
 }
 
 /* -------------------------------- UTILITIES ------------------------------- */
 
 @layer utilities {
-  .page_padding--top {
+  .content_padding--top {
     @apply pt-[88px] md:pt-[96px] lg:pt-[136px];
   }
 }

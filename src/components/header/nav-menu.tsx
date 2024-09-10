@@ -15,14 +15,17 @@ import {
 } from '@/components/ui/sheet';
 import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
 
+const AUTOMATIC_CLOSE_DELAY = 200;
+const MEDIUM_BREAKPOINT = 768;
+
 export function NavMenu() {
   const [open, setOpen] = useState(false);
   const { width } = useWindowSize({
-    debounceDelay: 200,
+    debounceDelay: AUTOMATIC_CLOSE_DELAY,
   });
 
   useEffect(() => {
-    if (width >= 768) {
+    if (width >= MEDIUM_BREAKPOINT) {
       setOpen(() => false);
     }
   }, [width]);
@@ -49,9 +52,9 @@ export function NavMenu() {
           </SheetDescription>
         </SheetHeader>
         <NavLinks
-          navListClassName="justify-start gap-8"
           navListDirection="vertical"
-          navLinks={NAVIGATION_LINKS}
+          navListClassName="justify-start gap-8"
+          navLinks={Object.values(NAVIGATION_LINKS)}
         />
       </SheetContent>
     </Sheet>
