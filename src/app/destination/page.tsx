@@ -46,7 +46,7 @@ export default function DestinationPage() {
           </span>
         </h1>
         <div className="flex-1">
-          <DestinationTabs className="grid h-full grid-cols-1 grid-rows-[1fr_auto] gap-8 lg:grid-cols-2 lg:grid-rows-1" />
+          <DestinationTabs className="grid h-full grid-cols-1 grid-rows-[1fr_auto] items-center justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-1" />
         </div>
       </div>
     </div>

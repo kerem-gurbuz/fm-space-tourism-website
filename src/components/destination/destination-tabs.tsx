@@ -7,13 +7,15 @@ import { DestinationCard } from '@/components/destination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { DESTINATIONS } from '@/lib/constants/destinations';
 
+const INITIAL_DESTINATION_NAME = DESTINATIONS.Moon.name.toLowerCase();
+
 type DestinationTabsProps = {
   className?: React.ComponentProps<'div'>['className'];
 };
 
 export function DestinationTabs({ className }: DestinationTabsProps) {
   const [destinationName, setDestinationName] = useState<string>(
-    DESTINATIONS.Moon.name.toLowerCase(),
+    INITIAL_DESTINATION_NAME,
   );
 
   return (
@@ -24,16 +26,16 @@ export function DestinationTabs({ className }: DestinationTabsProps) {
           alt={`Image of the ${destinationName}`}
           className="object-cover object-center"
           sizes="(max-width: 767px) 150px, (max-width: 1023px) 300px, (max-width: 1279px) 400px, 480px"
+          priority={destinationName === INITIAL_DESTINATION_NAME}
           quality={100}
           fill
         />
       </div>
-
       <Tabs
-        defaultValue={DESTINATIONS.Moon.name.toLowerCase()}
-        className="flex flex-col items-center gap-6 lg:items-start lg:gap-10"
+        defaultValue={INITIAL_DESTINATION_NAME}
+        className="flex w-full max-w-[514px] flex-col gap-6 lg:max-w-[445px] lg:gap-10"
       >
-        <TabsList className="flex h-8 gap-8">
+        <TabsList className="flex h-8 justify-center gap-8 lg:justify-start">
           {Object.values(DESTINATIONS).map(({ name }, index) => (
             <TabsTrigger
               key={index}
@@ -47,10 +49,9 @@ export function DestinationTabs({ className }: DestinationTabsProps) {
         </TabsList>
         {Object.values(DESTINATIONS).map((destination, index) => (
           <TabsContent key={index} value={destination.name.toLowerCase()}>
-            <DestinationCard
-              className="w-full max-w-[514px] lg:max-w-[445px]"
-              destination={destination}
-            />
+            <article aria-label={destination.name}>
+              <DestinationCard destination={destination} />
+            </article>
           </TabsContent>
         ))}
       </Tabs>
