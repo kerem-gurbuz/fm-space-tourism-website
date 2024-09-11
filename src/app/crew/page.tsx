@@ -1,4 +1,5 @@
 import { BackgroundImage } from '@/components/background-image';
+import { CrewTabs } from '@/components/crew';
 
 import desktopImageSrc from '/public/assets/crew/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/crew/background-mobile.jpg';
@@ -44,7 +45,9 @@ export default function CrewPage() {
             Meet your crew
           </span>
         </h1>
-        <div className="flex-1">{/* TODO: Add content */}</div>
+        <div className="flex-1">
+          <CrewTabs />
+        </div>
       </div>
     </div>
   );

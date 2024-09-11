@@ -1,5 +1,5 @@
 import { BackgroundImage } from '@/components/background-image';
-import { DestinationTabs } from '@/components/destination/destination-tabs';
+import { DestinationTabs } from '@/components/destination';
 
 import desktopImageSrc from '/public/assets/destination/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/destination/background-mobile.jpg';
@@ -46,7 +46,7 @@ export default function DestinationPage() {
           </span>
         </h1>
         <div className="flex-1">
-          <DestinationTabs className="grid h-full grid-cols-1 grid-rows-[1fr_auto] items-center justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-1" />
+          <DestinationTabs />
         </div>
       </div>
     </div>
