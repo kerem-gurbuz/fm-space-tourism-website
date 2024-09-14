@@ -1,9 +1,15 @@
+import type { Metadata } from 'next';
+
 import { BackgroundImage } from '@/components/background-image';
 import { DestinationTabs } from '@/components/destination';
 
 import desktopImageSrc from '/public/assets/destination/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/destination/background-mobile.jpg';
 import tabletImageSrc from '/public/assets/destination/background-tablet.jpg';
+
+export const metadata: Metadata = {
+  title: 'Destination',
+};
 
 const BACKGROUND_IMAGE_ALT =
   'A night sky filled with stars, with the Milky Way galaxy visible as a faint band across the center.';

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useWindowSize } from 'usehooks-ts';
 
+import { TechnologyCard } from '@/components/technology';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TECHNOLOGIES } from '@/lib/constants/technologies';
 import { createDescription, slugifyString } from '@/lib/utils';
@@ -43,7 +44,7 @@ export function TechnologyTabs() {
       ) : null}
       <Tabs
         defaultValue={INITIAL_TECHNOLOGY_NAME}
-        className="mx-auto flex w-full max-w-[514px] flex-col gap-10 md:max-w-[512px] lg:max-w-[640px] lg:flex-row lg:gap-16"
+        className="mx-auto flex w-full max-w-[514px] flex-col gap-10 md:max-w-[512px] lg:max-w-[640px] lg:flex-row lg:items-center lg:gap-16"
       >
         <TabsList className="flex h-10 gap-4 md:h-14 lg:h-[304px] lg:flex-col lg:gap-8">
           {Object.values(TECHNOLOGIES).map(({ name }, index) => (
@@ -61,7 +62,7 @@ export function TechnologyTabs() {
         {Object.values(TECHNOLOGIES).map((technology, index) => (
           <TabsContent key={index} value={slugifyString(technology.name)}>
             <article aria-label={`Information about the ${technology.name}`}>
-              {/* TODO: Add content */}
+              <TechnologyCard technology={technology} />
             </article>
           </TabsContent>
         ))}

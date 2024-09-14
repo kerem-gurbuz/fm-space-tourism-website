@@ -1,9 +1,15 @@
+import type { Metadata } from 'next';
+
 import { BackgroundImage } from '@/components/background-image';
 import { TechnologyTabs } from '@/components/technology';
 
 import desktopImageSrc from '/public/assets/technology/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/technology/background-mobile.jpg';
 import tabletImageSrc from '/public/assets/technology/background-tablet.jpg';
+
+export const metadata: Metadata = {
+  title: 'Technology',
+};
 
 const BACKGROUND_IMAGE_ALT =
   'Star trails dance across the midnight canvas, leaving ethereal arcs of light.';
@@ -36,7 +42,7 @@ export default function TechnologyPage() {
           priority: true,
         }}
       />
-      <div className="mx-auto flex w-full max-w-[1275px] flex-col gap-6 p-6 pb-12 md:p-10 lg:py-12 lg:pl-16 lg:pr-0 xl:ml-auto xl:mr-0 min-[1441px]:mx-auto min-[1441px]:px-0">
+      <div className="mx-auto flex w-full max-w-[1275px] flex-col gap-6 p-6 pb-12 md:p-10 lg:py-12 lg:pl-16 lg:pr-0 xl:ml-auto xl:mr-0 2xl:px-0 min-[1441px]:mx-auto">
         <h1 className="flex justify-center gap-6 md:justify-start">
           <span className="text_preset_9--mobile-bold md:text_preset_5--tablet lg:text_preset_5--desktop font-bold opacity-25 lg:tracking-[4.72px]">
             03
