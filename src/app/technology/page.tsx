@@ -1,23 +1,23 @@
 import type { Metadata } from 'next';
 
 import { BackgroundImage } from '@/components/background-image';
-import { DestinationTabs } from '@/components/destination';
+import { TechnologyTabs } from '@/components/technology';
 
-import desktopImageSrc from '/public/assets/destination/background-desktop.jpg';
-import mobileImageSrc from '/public/assets/destination/background-mobile.jpg';
-import tabletImageSrc from '/public/assets/destination/background-tablet.jpg';
+import desktopImageSrc from '/public/assets/technology/background-desktop.jpg';
+import mobileImageSrc from '/public/assets/technology/background-mobile.jpg';
+import tabletImageSrc from '/public/assets/technology/background-tablet.jpg';
 
 export const metadata: Metadata = {
-  title: 'Destination',
+  title: 'Technology',
 };
 
 const BACKGROUND_IMAGE_ALT =
-  'A night sky filled with stars, with the Milky Way galaxy visible as a faint band across the center.';
+  'Star trails dance across the midnight canvas, leaving ethereal arcs of light.';
 
-export default function DestinationPage() {
+export default function TechnologyPage() {
   return (
     <div
-      id="destination-page"
+      id="technology-page"
       className="content_padding--top relative flex min-h-dvh"
     >
       <BackgroundImage
@@ -42,17 +42,17 @@ export default function DestinationPage() {
           priority: true,
         }}
       />
-      <div className="mx-auto flex w-full max-w-[1110px] flex-col gap-6 p-6 md:p-10 lg:px-16 lg:py-12 xl:px-0">
+      <div className="mx-auto flex w-full max-w-[1275px] flex-col gap-6 p-6 pb-12 md:p-10 lg:py-12 lg:pl-16 lg:pr-0 xl:ml-auto xl:mr-0 2xl:px-0 min-[1441px]:mx-auto">
         <h1 className="flex justify-center gap-6 md:justify-start">
           <span className="text_preset_9--mobile-bold md:text_preset_5--tablet lg:text_preset_5--desktop font-bold opacity-25 lg:tracking-[4.72px]">
-            01
+            03
           </span>
           <span className="text_preset_6--mobile md:text_preset_5--tablet lg:text_preset_5--desktop uppercase">
-            Pick your destination
+            Space launch 101
           </span>
         </h1>
         <div className="flex-1">
-          <DestinationTabs />
+          <TechnologyTabs />
         </div>
       </div>
     </div>

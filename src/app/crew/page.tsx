@@ -1,9 +1,15 @@
+import type { Metadata } from 'next';
+
 import { BackgroundImage } from '@/components/background-image';
 import { CrewTabs } from '@/components/crew';
 
 import desktopImageSrc from '/public/assets/crew/background-desktop.jpg';
 import mobileImageSrc from '/public/assets/crew/background-mobile.jpg';
 import tabletImageSrc from '/public/assets/crew/background-tablet.jpg';
+
+export const metadata: Metadata = {
+  title: 'Crew',
+};
 
 const BACKGROUND_IMAGE_ALT =
   'A partially illuminated Earth with visible continents and cloud cover.';
