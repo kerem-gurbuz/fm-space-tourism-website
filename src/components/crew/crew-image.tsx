@@ -40,7 +40,7 @@ export function CrewImage({
         />
       </div>
       {/* Desktop Image  */}
-      <div className="relative hidden h-full w-full lg:block">
+      <div className="relative hidden h-full min-h-[500px] w-full lg:block">
         <Image
           src={`/assets/crew/image-${crewMemberName}.webp`}
           alt={createDescription('Image of', crewMemberName)}

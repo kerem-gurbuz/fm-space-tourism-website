@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlow.variable} ${barlow_condensed.variable} ${bellefair.variable}`}
+      className={`scrollbar-thin scrollbar-thumb-blue-900 scrollbar-track-transparent ${barlow.variable} ${barlow_condensed.variable} ${bellefair.variable}`}
     >
       <body className="text-white antialiased">
         <Header className="fixed inset-x-0 top-0 z-50" />
