@@ -1,17 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 
 import { DestinationCard } from '@/components/destination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { DESTINATIONS } from '@/lib/constants/destinations';
-import { cn, createDescription, slugifyString } from '@/lib/utils';
+import { createDescription, slugifyString } from '@/lib/utils';
 
 const INITIAL_DESTINATION_NAME = slugifyString(DESTINATIONS.Moon.name);
 
 export function DestinationTabs() {
-  const [isPending, startTransition] = useTransition();
   const [destinationName, setDestinationName] = useState<string>(
     INITIAL_DESTINATION_NAME,
   );
@@ -22,9 +21,7 @@ export function DestinationTabs() {
         <Image
           src={`/assets/destination/image-${destinationName}.webp`}
           alt={createDescription('Image of the', destinationName)}
-          className={cn('object-cover object-center', {
-            grayscale: isPending,
-          })}
+          className="object-cover object-center"
           sizes="(max-width: 767px) 150px, (max-width: 1023px) 300px, (max-width: 1279px) 400px, 480px"
           priority={destinationName === INITIAL_DESTINATION_NAME}
           quality={100}
@@ -41,9 +38,7 @@ export function DestinationTabs() {
               key={index}
               value={slugifyString(name)}
               className="text_preset_8--mobile md:text_preset_8--desktop inline-flex items-start justify-center text-blue-300 data-[state=active]:border-b-[3px] data-[state=active]:border-b-white data-[state=active]:text-white"
-              onClick={() =>
-                startTransition(() => setDestinationName(slugifyString(name)))
-              }
+              onClick={() => setDestinationName(slugifyString(name))}
             >
               {name.toUpperCase()}
             </TabsTrigger>

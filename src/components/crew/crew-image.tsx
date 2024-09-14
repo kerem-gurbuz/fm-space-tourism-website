@@ -1,17 +1,15 @@
 import Image from 'next/image';
 
-import { cn, createDescription } from '@/lib/utils';
+import { createDescription } from '@/lib/utils';
 
 type CrewImageProps = {
   initialCrewMemberName: string;
   crewMemberName: string;
-  isPending: boolean;
 };
 
 export function CrewImage({
   initialCrewMemberName,
   crewMemberName,
-  isPending,
 }: CrewImageProps) {
   return (
     <div className="flex items-center justify-center lg:items-end">
@@ -20,9 +18,7 @@ export function CrewImage({
         <Image
           src={`/assets/crew/image-${crewMemberName}.webp`}
           alt={createDescription('Image of', crewMemberName)}
-          className={cn('object-contain object-center', {
-            grayscale: isPending,
-          })}
+          className="object-contain object-center"
           sizes="(max-width: 767px) 100vw"
           priority={crewMemberName === initialCrewMemberName}
           quality={100}
@@ -36,9 +32,7 @@ export function CrewImage({
         <Image
           src={`/assets/crew/image-${crewMemberName}.webp`}
           alt={createDescription('Image of', crewMemberName)}
-          className={cn('object-contain object-top', {
-            grayscale: isPending,
-          })}
+          className="object-contain object-top"
           sizes="(min-width: 768px) and (max-width: 1023px) 100vw"
           priority={crewMemberName === initialCrewMemberName}
           quality={100}
@@ -46,13 +40,11 @@ export function CrewImage({
         />
       </div>
       {/* Desktop Image  */}
-      <div className="relative hidden h-[676px] w-full lg:block">
+      <div className="relative hidden h-full w-full lg:block">
         <Image
           src={`/assets/crew/image-${crewMemberName}.webp`}
           alt={createDescription('Image of', crewMemberName)}
-          className={cn('object-contain object-bottom', {
-            grayscale: isPending,
-          })}
+          className="object-contain object-bottom"
           sizes="(min-width: 1024px) 100vw"
           priority={crewMemberName === initialCrewMemberName}
           quality={100}
