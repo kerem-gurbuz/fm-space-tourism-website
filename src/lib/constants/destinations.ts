@@ -1,4 +1,4 @@
-export enum DESTINATION_NAME {
+enum DESTINATION_NAME {
   MOON = 'Moon',
   MARS = 'Mars',
   EUROPA = 'Europa',
@@ -13,7 +13,9 @@ export type Destination = {
   travel: string;
 };
 
-export const DESTINATIONS: { [key in DESTINATION_NAME]: Destination } = {
+export type Destinations = Record<DESTINATION_NAME, Destination>;
+
+export const DESTINATIONS: Destinations = {
   [DESTINATION_NAME.MOON]: {
     name: 'Moon',
     imageSrc: '/assets/destination/image-moon.webp',

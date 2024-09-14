@@ -1,17 +1,17 @@
 import { BackgroundImage } from '@/components/background-image';
-import { DestinationTabs } from '@/components/destination';
+import { CrewTabs } from '@/components/crew';
 
-import desktopImageSrc from '/public/assets/destination/background-desktop.jpg';
-import mobileImageSrc from '/public/assets/destination/background-mobile.jpg';
-import tabletImageSrc from '/public/assets/destination/background-tablet.jpg';
+import desktopImageSrc from '/public/assets/crew/background-desktop.jpg';
+import mobileImageSrc from '/public/assets/crew/background-mobile.jpg';
+import tabletImageSrc from '/public/assets/crew/background-tablet.jpg';
 
 const BACKGROUND_IMAGE_ALT =
-  'A night sky filled with stars, with the Milky Way galaxy visible as a faint band across the center.';
+  'A partially illuminated Earth with visible continents and cloud cover.';
 
-export default function DestinationPage() {
+export default function CrewPage() {
   return (
     <div
-      id="destination-page"
+      id="crew-page"
       className="content_padding--top relative flex min-h-dvh"
     >
       <BackgroundImage
@@ -39,14 +39,14 @@ export default function DestinationPage() {
       <div className="mx-auto flex w-full max-w-[1110px] flex-col gap-6 p-6 md:p-10 lg:px-16 lg:py-12 xl:px-0">
         <h1 className="flex justify-center gap-6 md:justify-start">
           <span className="text_preset_9--mobile-bold md:text_preset_5--tablet lg:text_preset_5--desktop font-bold opacity-25 lg:tracking-[4.72px]">
-            01
+            02
           </span>
           <span className="text_preset_6--mobile md:text_preset_5--tablet lg:text_preset_5--desktop uppercase">
-            Pick your destination
+            Meet your crew
           </span>
         </h1>
         <div className="flex-1">
-          <DestinationTabs />
+          <CrewTabs />
         </div>
       </div>
     </div>

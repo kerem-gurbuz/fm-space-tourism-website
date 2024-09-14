@@ -1,4 +1,4 @@
-export enum MEMBER_NAME {
+enum MEMBER_NAME {
   DOUGLAS_HURLEY = 'Douglas Hurley',
   MARK_SHUTTLEWORTH = 'Mark Shuttleworth',
   VICTOR_GLOVER = 'Victor Glover',
@@ -12,7 +12,9 @@ export type CrewMember = {
   bio: string;
 };
 
-export const CREW: { [key in MEMBER_NAME]: CrewMember } = {
+export type Crew = Record<MEMBER_NAME, CrewMember>;
+
+export const CREW: Crew = {
   [MEMBER_NAME.DOUGLAS_HURLEY]: {
     name: 'Douglas Hurley',
     imageSrc: '/assets/crew/image-douglas-hurley.webp',

@@ -1,8 +1,9 @@
-export enum TECHNOLOGY_NAME {
+enum TECHNOLOGY_NAME {
   LAUNCH_VEHICLE = 'Launch vehicle',
   SPACEPORT = 'Spaceport',
   SPACE_CAPSULE = 'Space capsule',
 }
+
 export type Technology = {
   name: string;
   imageSrc: {
@@ -12,7 +13,9 @@ export type Technology = {
   description: string;
 };
 
-export const TECHNOLOGIES: { [key in TECHNOLOGY_NAME]: Technology } = {
+export type Technologies = Record<TECHNOLOGY_NAME, Technology>;
+
+export const TECHNOLOGIES: Technologies = {
   [TECHNOLOGY_NAME.LAUNCH_VEHICLE]: {
     name: 'Launch vehicle',
     imageSrc: {
