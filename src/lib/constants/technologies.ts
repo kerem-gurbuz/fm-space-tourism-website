@@ -1,7 +1,7 @@
 enum TECHNOLOGY_NAME {
-  LAUNCH_VEHICLE = 'Launch vehicle',
+  LAUNCH_VEHICLE = 'Launch Vehicle',
   SPACEPORT = 'Spaceport',
-  SPACE_CAPSULE = 'Space capsule',
+  SPACE_CAPSULE = 'Space Capsule',
 }
 
 export type Technology = {
@@ -17,7 +17,7 @@ export type Technologies = Record<TECHNOLOGY_NAME, Technology>;
 
 export const TECHNOLOGIES: Technologies = {
   [TECHNOLOGY_NAME.LAUNCH_VEHICLE]: {
-    name: 'Launch vehicle',
+    name: 'Launch Vehicle',
     imageSrc: {
       portrait: '/assets/technology/image-launch-vehicle-portrait.jpg',
       landscape: '/assets/technology/image-launch-vehicle-landscape.jpg',
@@ -35,7 +35,7 @@ export const TECHNOLOGIES: Technologies = {
       "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch.",
   },
   [TECHNOLOGY_NAME.SPACE_CAPSULE]: {
-    name: 'Space capsule',
+    name: 'Space Capsule',
     imageSrc: {
       portrait: '/assets/technology/image-space-capsule-portrait.jpg',
       landscape: '/assets/technology/image-space-capsule-landscape.jpg',

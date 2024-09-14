@@ -15,20 +15,21 @@ import {
 } from '@/components/ui/sheet';
 import { NAVIGATION_LINKS } from '@/lib/constants/navigation-links';
 
-const AUTOMATIC_CLOSE_DELAY = 200;
-const MEDIUM_BREAKPOINT = 768;
+const WINDOW_SIZE_DEBOUNCE_DELAY = 200;
+const MD_BREAKPOINT = 768;
 
 export function NavMenu() {
-  const [open, setOpen] = useState(false);
-  const { width } = useWindowSize({
-    debounceDelay: AUTOMATIC_CLOSE_DELAY,
+  const [open, setOpen] = useState<boolean>(false);
+  const { width: windowWidth } = useWindowSize({
+    initializeWithValue: false,
+    debounceDelay: WINDOW_SIZE_DEBOUNCE_DELAY,
   });
 
   useEffect(() => {
-    if (width >= MEDIUM_BREAKPOINT) {
+    if (windowWidth && windowWidth >= MD_BREAKPOINT) {
       setOpen(() => false);
     }
-  }, [width]);
+  }, [windowWidth]);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>

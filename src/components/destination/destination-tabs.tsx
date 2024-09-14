@@ -41,6 +41,7 @@ export function DestinationTabs() {
               onClick={() => setDestinationName(slugifyString(name))}
             >
               {name.toUpperCase()}
+              <span className="sr-only">{name}</span>
             </TabsTrigger>
           ))}
         </TabsList>
