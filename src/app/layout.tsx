@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   },
   description:
     'Experience the ultimate adventure by traveling to outer space. Explore our site to learn more about our destinations, crew, and technology. Get ready for a truly out-of-this-world experience!',
+  keywords: [
+    'space travel',
+    'space exploration',
+    'space tourism',
+    'space agency',
+    'planets',
+    'astronauts',
+    'technology',
+  ],
+  authors: [
+    {
+      name: 'Kerem GÜRBÜZ',
+      url: 'https://www.linkedin.com/in/kerem-g%C3%BCrb%C3%BCz-85b2032b5',
+    },
+  ],
 };
 
 export default function RootLayout({
