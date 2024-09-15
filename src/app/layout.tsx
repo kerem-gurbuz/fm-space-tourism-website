@@ -1,32 +1,9 @@
-import type { Metadata } from 'next';
-
 import { Header } from '@/components/header';
+import { cn } from '@/lib/utils';
 import { barlow, barlow_condensed, bellefair } from '@/styles/fonts';
 import '@/styles/globals.css';
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Space Travel',
-    default: 'Space Travel - Explore the Universe',
-  },
-  description:
-    'Experience the ultimate adventure by traveling to outer space. Explore our site to learn more about our destinations, crew, and technology. Get ready for a truly out-of-this-world experience!',
-  keywords: [
-    'space travel',
-    'space exploration',
-    'space tourism',
-    'space agency',
-    'planets',
-    'astronauts',
-    'technology',
-  ],
-  authors: [
-    {
-      name: 'Kerem GÜRBÜZ',
-      url: 'https://www.linkedin.com/in/kerem-g%C3%BCrb%C3%BCz-85b2032b5',
-    },
-  ],
-};
+export { metadata } from '@/lib/seo/metadata';
 
 export default function RootLayout({
   children,
@@ -36,10 +13,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scrollbar-thin scrollbar-thumb-blue-900 scrollbar-track-transparent ${barlow.variable} ${barlow_condensed.variable} ${bellefair.variable}`}
+      className={`scrollbar-thin scrollbar-track-transparent scrollbar-thumb-blue-900`}
     >
-      <body className="text-white antialiased">
-        <Header className="fixed inset-x-0 top-0 z-50" />
+      <body
+        className={cn(
+          'relative antialiased',
+          barlow.variable,
+          barlow_condensed.variable,
+          bellefair.variable,
+        )}
+      >
+        <Header className="absolute inset-x-0 top-0 z-50" />
         <main>{children}</main>
       </body>
     </html>

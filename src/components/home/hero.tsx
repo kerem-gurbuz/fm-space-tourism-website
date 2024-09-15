@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="grid h-full grid-cols-1 grid-rows-[auto_1fr] md:grid-rows-[auto_auto] lg:grid-cols-2 lg:content-end"
+      className="grid h-full grid-cols-1 grid-rows-[auto_1fr] gap-8 md:grid-rows-[auto_auto] lg:grid-cols-2 lg:content-end lg:gap-0"
     >
       {/* Text Block */}
       <div className="mx-auto max-w-[540px] md:w-[512px] md:self-start lg:mx-0 lg:w-full lg:self-center lg:justify-self-start">
