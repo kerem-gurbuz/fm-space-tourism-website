@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-const WEBSITE_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL!;
-const AUTHOR_URL = 'https://www.linkedin.com/in/gurbuz-kerem';
+const DEPLOYMENT_URL = process.env.DEPLOYMENT_URL!;
+const AUTHOR_URL = 'https://www.linkedin.com/in/gurbuz-kerem/';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(WEBSITE_URL),
+  metadataBase: new URL(DEPLOYMENT_URL),
   title: {
     template: '%s | Space Travel',
     default: 'Space Travel - Explore the Universe',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'Space Travel - Explore the Universe',
     description:
       'Experience the ultimate adventure by traveling to outer space. Explore our site to learn more about our destinations, crew, and technology. Get ready for a truly out-of-this-world experience!',
-    url: WEBSITE_URL,
+    url: DEPLOYMENT_URL,
     siteName: 'Space Travel',
     locale: 'en_US',
     type: 'website',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Space Travel - Explore the Universe',
     description:
       'Experience the ultimate adventure by traveling to outer space. Explore our site to learn more about our destinations, crew, and technology. Get ready for a truly out-of-this-world experience!',
-    site: WEBSITE_URL,
+    site: DEPLOYMENT_URL,
     card: 'summary_large_image',
     creator: 'Kerem Gürbüz',
   },

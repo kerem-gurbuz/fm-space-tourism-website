@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const WEBSITE_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL!;
+const DEPLOYMENT_URL = process.env.DEPLOYMENT_URL!;
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: `${WEBSITE_URL}/sitemap.xml`,
+    sitemap: `${DEPLOYMENT_URL}/sitemap.xml`,
   };
 }
