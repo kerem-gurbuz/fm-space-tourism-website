@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/space-tourism-website-solution-mHAf4WxjXT](https://www.frontendmentor.io/solutions/space-tourism-website-solution-mHAf4WxjXT)
+- Solution URL: [https://www.frontendmentor.io/solutions/space-tourism-website-solution-AYNx2GN-ha](https://www.frontendmentor.io/solutions/space-tourism-website-solution-AYNx2GN-ha)
 - Live Site URL: [https://kerem-gurbuz-fm-space-tourism-website.vercel.app](https://kerem-gurbuz-fm-space-tourism-website.vercel.app)
 
 ## Built with
